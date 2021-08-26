@@ -1,0 +1,1356 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass heb-article
+\use_default_options true
+\maintain_unincluded_children false
+\language hebrew
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 1cm
+\bottommargin 2cm
+\headheight 1cm
+\headsep 1cm
+\footskip 1cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+מבוא ללמידה עמוקה - תרגיל
+\family roman
+\series medium
+\shape up
+\size largest
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Author
+עידן רפאלי ואנאל בן סימון
+\end_layout
+
+\begin_layout Section*
+חלק מעשי
+\end_layout
+
+\begin_layout Enumerate
+בסעיף 
+\begin_inset Formula $3$
+\end_inset
+
+ מתואר אופן ייצוג הדאטא שבחרנו בו.
+\end_layout
+
+\begin_layout Enumerate
+ניסינו להריץ את האימון על 
+\begin_inset Formula $6$
+\end_inset
+
+ ארכיטקטורות שונות של רשתות, אשר נבדלות ביניהן במספר השכבות, מספר הנוירונים
+ בכל שכבה, וסוגי האקטיבציה )
+\begin_inset Formula $\text{Relu/Sigmoid}$
+\end_inset
+
+(.
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\begin_inset Formula $4$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+רשתות הן בעלות מספר נוירונים גבוה יחסית, ו-
+\begin_inset Formula $2$
+\end_inset
+
+ רשתות בעלות מספר נמוך.
+ הקלט בכל הארכטקטורות הוא וקטור בגודל 
+\begin_inset Formula $180$
+\end_inset
+
+ )כפי שתואר בסעיף 
+\begin_inset Formula $3$
+\end_inset
+
+(, והפלט הוא נוירון בודד, שמציין את התיוג שהרשת מביאה עבור הדגימה - מספר
+ בין 
+\begin_inset Formula $0$
+\end_inset
+
+ ל-
+\begin_inset Formula $1$
+\end_inset
+
+ )לאחר הפעלת 
+\begin_inset Formula $\text{Softmax}$
+\end_inset
+
+(.
+ ניתן לראות את ארכיטקטורות הרשתות בקוד שצירפנו )שמות המחלקות הן 
+\begin_inset Formula $\text{Model1},\ldots,\text{Model6}$
+\end_inset
+
+(.
+ בסופו של דבר, הארכיטקטורה שהביאה לאחוזי הדיוק הטובים ביותר על הטסט היא
+ הארכיטקטורה של מודל 
+\begin_inset Formula $1$
+\end_inset
+
+ )המחלקה 
+\begin_inset Formula $\text{Model1}$
+\end_inset
+
+(, בעלת אחוזי דיוק של כ-
+\begin_inset Formula $92.6\%$
+\end_inset
+
+.
+ האכיטקטורה 
+\begin_inset Quotes eld
+\end_inset
+
+המנצחת
+\begin_inset Quotes erd
+\end_inset
+
+ היא:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+
+\numeric on
+3
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+שכבות נסתרות
+\end_layout
+
+\begin_layout Itemize
+שכבה נסתרת ראשונה: 
+\begin_inset Formula $512$
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+נוירונים
+\end_layout
+
+\begin_layout Itemize
+שכבה נסתרת שניה: 
+\begin_inset Formula $512$
+\end_inset
+
+ נוירונים
+\end_layout
+
+\begin_layout Itemize
+שכבה נסתרת שלישית: 
+\begin_inset Formula $256$
+\end_inset
+
+ נוירונים
+\end_layout
+
+\begin_layout Itemize
+כל האקטיבציות הן 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+כל דוגמה בדאטא ייצגנו בעזרת וקטור בינארי באורך 
+\begin_inset Formula $180$
+\end_inset
+
+: ישנם 
+\begin_inset Formula $20$
+\end_inset
+
+ סוגים שונים של חומצות אמינו, וישנו רצף של 
+\begin_inset Formula $9$
+\end_inset
+
+ חומצות בכל דגימה.
+ לכל סוג חומצה הגדרנו אינדקס )מספר בין 
+\begin_inset Formula $0$
+\end_inset
+
+ ל-
+\begin_inset Formula $19$
+\end_inset
+
+(.
+ כל 
+\begin_inset Formula $20$
+\end_inset
+
+ ערכים רצופים בוקטור מתאימים לחומצת אמינו בדגימה, כאשר ערכי כולם אפסים מלבד
+ באינדקס המתאים לחומצת האמינו, שם הערך הוא 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ סה
+\begin_inset Quotes erd
+\end_inset
+
+כ ישנם 
+\begin_inset Formula $20*9=180$
+\end_inset
+
+ ערכים שונים בוקטור.
+\begin_inset Newline newline
+\end_inset
+
+יש לציין כי זיהינו חוסר איזון משמעותי בין מספר הדגימות התויגיות בתיוג חיובי
+ לעומת תיוג שלילי - כ-
+\begin_inset Formula $89\%$
+\end_inset
+
+ מהדגימות תויגו באופן שלילי )תיוג 
+\begin_inset Formula $0$
+\end_inset
+
+(, ורק כ-
+\begin_inset Formula $11\%$
+\end_inset
+
+ תויגו באופן חיובי )תיוג 
+\begin_inset Formula $1$
+\end_inset
+
+(.
+ כדי לנסות להתגבר על חוסר האיזון, החלטנו לשכפל את הדגימות החיוביות 
+\series bold
+בשלב האימון בלבד
+\series default
+ כך שמספרן סה
+\begin_inset Quotes erd
+\end_inset
+
+כ יהיה קרוב יחסית למספר הדגימות השליליות.
+\end_layout
+
+\begin_layout Enumerate
+כפי שציינו בסעיף 
+\begin_inset Formula $2$
+\end_inset
+
+, מודל 
+\begin_inset Formula $1$
+\end_inset
+
+ נבחר בתור המודל הטוב ביותר.
+ הפרמטרים שלו הן מטריצות בגודל 
+\begin_inset Formula $512\times180$
+\end_inset
+
+, 
+\begin_inset Formula $512\times512$
+\end_inset
+
+, 
+\begin_inset Formula $256\times512$
+\end_inset
+
+ וכן 
+\begin_inset Formula $1\times256$
+\end_inset
+
+, עם 
+\begin_inset Formula $biases$
+\end_inset
+
+ בגדלים 
+\begin_inset Formula $512$
+\end_inset
+
+, 
+\begin_inset Formula $512$
+\end_inset
+
+, 
+\begin_inset Formula $256$
+\end_inset
+
+, 
+\begin_inset Formula $1$
+\end_inset
+
+ בהתאמה.
+ בסעיף 
+\begin_inset Formula $5$
+\end_inset
+
+ מתוארים הגרפים של ה-
+\begin_inset Formula $\text{Loss}$
+\end_inset
+
+ וה-
+\begin_inset Formula $\text{Accuracy}$
+\end_inset
+
+ עבור דאטא האימון והטסט )הגרפים של כל המודלים מצורפים בקובץ הזיפ(.
+\end_layout
+
+\begin_layout Enumerate
+להלן הגרפים המתארים את ה-
+\begin_inset Formula $\text{Loss}$
+\end_inset
+
+ וה-
+\begin_inset Formula $\text{Accuracy}$
+\end_inset
+
+ על דאטא האימון והטסט, עבור מודל
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\xout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\xout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\numeric off
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename model1_loss.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אפשר לראות בגרף הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל כי ה-
+\begin_inset Formula $\text{loss}$
+\end_inset
+
+ יורד כל הזמן, כצפוי על דאטא האימון, אך על הטסט ה-
+\begin_inset Formula $\text{loss}$
+\end_inset
+
+ במגמת עליה לאורך האפוקים )עקב ה-
+\begin_inset Formula $\text{overfitting}$
+\end_inset
+
+(
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename model1_accuracy.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+אפשר לראות בגרף הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל שה-
+\begin_inset Formula $\text{accuracy}$
+\end_inset
+
+ עולה בשני הגרפים בהתחלה מהר.
+ בדאטא האימון, הדיוק עולה עד לאחוזים גבוהים מאוד )קרוב ל-
+\begin_inset Formula $100\%$
+\end_inset
+
+( וזה צפוי כמובן, אך על הטסט הדיוק מתייצב באזור ה-
+\begin_inset Formula $92\%$
+\end_inset
+
+ ולא עולה עוד, בגלל ה-
+\begin_inset Formula $\text{overfitting}$
+\end_inset
+
+(.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+את הדגימות מהדאטא של 
+\begin_inset Formula $\text{Spike SARS-CoV-2}$
+\end_inset
+
+ יצרנו על-ידי הפרדת כל 
+\begin_inset Formula $9$
+\end_inset
+
+ אותיות )חומצות אמינו( לדגימה נפרדת, כך שהאות הראשונה של כל דגימה חופפת
+ לאות האחרונה של הדגימה שלפניה.
+ ביצענו פרדיקציה עם מודל 
+\begin_inset Formula $1$
+\end_inset
+
+ המאומן עבור דגימות הקורונה.
+ קיבלנו שהדגימות עבורן המודל נתן להן את הציון הגבוה ביותר הן:
+\begin_inset Formula 
+\begin{align*}
+VIRGDEVRQ\\
+FPREGVFVS\\
+KCVNFNFNG\\
+CLIGAEHVN\\
+KTQSLLIVN
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+שאלות תאורטיות
+\end_layout
+
+\begin_layout Enumerate
+יהיו 
+\begin_inset Formula $f:\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $g:\mathbb{R}^{k}\rightarrow\mathbb{R}^{n}$
+\end_inset
+
+ פונקציות לינאריות המוגדרות על-ידי 
+\begin_inset Formula $f(x)=Ax$
+\end_inset
+
+ ו-
+\begin_inset Formula $g(x)=Bx$
+\end_inset
+
+ עבור 
+\begin_inset Formula $A\in\mathbb{R}^{m\times n}$
+\end_inset
+
+, 
+\begin_inset Formula $B\in\mathbb{R}^{n\times k}$
+\end_inset
+
+.
+ מתקיים:
+\begin_inset Formula 
+\[
+f\left(g\left(x\right)\right)=f\left(Bx\right)=ABx
+\]
+
+\end_inset
+
+וזו פונקציה לינארית, כאשר 
+\begin_inset Formula $AB\in\mathbb{R}^{k\times m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $f:\mathbb{R}^{n}\rightarrow\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $g:\mathbb{R}^{k}\rightarrow\mathbb{R}^{n}$
+\end_inset
+
+ פונקציות אפיניות המוגדרות על-ידי 
+\begin_inset Formula $f(x)=Ax+b$
+\end_inset
+
+ ו-
+\begin_inset Formula $g(x)=Cx+d$
+\end_inset
+
+ עבור 
+\begin_inset Formula $A\in\mathbb{R}^{m\times n}$
+\end_inset
+
+, 
+\begin_inset Formula $B\in\mathbb{R}^{n\times k}$
+\end_inset
+
+, 
+\begin_inset Formula $b\in\mathbb{R}^{m}$
+\end_inset
+
+, 
+\begin_inset Formula $d\in\mathbb{R}^{n}$
+\end_inset
+
+.
+ מתקיים:
+\begin_inset Formula 
+\[
+f\left(g\left(x\right)\right)=f\left(Cx+d\right)=A(Cx+d)+b=ACx+Ad+b
+\]
+
+\end_inset
+
+וזו פונקציה אפינית, כאשר 
+\begin_inset Formula $AC\in\mathbb{R}^{k\times m}$
+\end_inset
+
+ וכן 
+\begin_inset Formula $Ad+b\in\mathbb{R}^{m}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset space ~
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+תנאי העצירה עבור התהליך האיטרטיבי הוא:
+\begin_inset Formula 
+\[
+\left|\nabla f\left(x^{n}\right)\right|\leq\epsilon
+\]
+
+\end_inset
+
+ התנאי הזה נובע מהעובדה שכאשר 
+\begin_inset Formula $x^{n}$
+\end_inset
+
+ הוא נקודת קיצון, הגרדיאנט בנקודה זו מתאפס, אך משיקולים נומריים של המחשב,
+ חייבים להרשות איזשהו 
+\begin_inset Formula $\text{tolerance}$
+\end_inset
+
+ על-ידי הדרישה ש-
+\begin_inset Formula $\left|\nabla f\left(x^{n}\right)\right|\leq\epsilon$
+\end_inset
+
+ עבור 
+\begin_inset Formula $\epsilon>0$
+\end_inset
+
+ קטן כרצוננו.
+\end_layout
+
+\begin_layout Enumerate
+ראשית, נקודה 
+\begin_inset Formula $x$
+\end_inset
+
+ תהיה נקודת מינימום או מקסימום לוקאלית של הפונקציה 
+\begin_inset Formula $f$
+\end_inset
+
+ רק כאשר הגרדיינט של הפונקציה באותה נקודה הוא 
+\begin_inset Formula $0$
+\end_inset
+
+, כלומר 
+\begin_inset Formula $\nabla f\left(x\right)=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+נסתכל קירוב טיילור מסדר שני בנקודה 
+\begin_inset Formula $x$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+f\left(x+dx\right)=f\left(x\right)+\nabla f\left(x\right)\cdot dx+dx^{T}\cdot H\left(x\right)\cdot dx+O\left(\left\Vert dx\right\Vert ^{3}\right)
+\]
+
+\end_inset
+
+כמו שאמרנו, 
+\begin_inset Formula $\nabla f\left(x\right)=0$
+\end_inset
+
+.
+ כמו כן, לאחר שנעביר את 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+ לאגף שמאל, נקבל:
+\begin_inset Formula 
+\[
+f\left(x+dx\right)-f\left(x\right)=dx^{T}\cdot H\left(x\right)\cdot dx+O\left(\left\Vert dx\right\Vert ^{3}\right)
+\]
+
+\end_inset
+
+כדי ש-
+\begin_inset Formula $x$
+\end_inset
+
+ תהיה נקודת מינימום לוקאלי, נרצה שלכל 
+\begin_inset Formula $dx$
+\end_inset
+
+ יתקיים 
+\begin_inset Formula $f\left(x+dx\right)-f\left(x\right)\geq0$
+\end_inset
+
+, כלומר שלכל 
+\begin_inset Formula $dx$
+\end_inset
+
+ יתקיים ש-
+\begin_inset Formula $dx^{T}\cdot H\left(x\right)\cdot dx\geq0$
+\end_inset
+
+ וזה יקרה אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם מטריצת ההסייאן 
+\begin_inset Formula $H\left(x\right)$
+\end_inset
+
+ היא מטריצה 
+\begin_inset Formula $\text{PSD}$
+\end_inset
+
+ וזה קורה אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם לכל ערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ של 
+\begin_inset Formula $H\left(x\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lambda\geq0$
+\end_inset
+
+ )נזכור ש-
+\begin_inset Formula $H$
+\end_inset
+
+ סימטרית כי אנחנו מניחים ש-
+\begin_inset Formula $f$
+\end_inset
+
+ גזירה פעמיים, כלומר 
+\begin_inset Formula $H$
+\end_inset
+
+ לכסינה אורתוגונלית(.
+ באופן דומה 
+\begin_inset Formula $dx$
+\end_inset
+
+ היא נקודת מקסימום לוקאלי אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם 
+\begin_inset Formula $f\left(x+dx\right)-f\left(x\right)\leq0$
+\end_inset
+
+ אמ
+\begin_inset Quotes erd
+\end_inset
+
+ם לכל ערך עצמי 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ של 
+\begin_inset Formula $H\left(x\right)$
+\end_inset
+
+ מתקיים 
+\begin_inset Formula $\lambda\leq0$
+\end_inset
+
+.
+ אם קיימים ע
+\begin_inset Quotes erd
+\end_inset
+
+ע חיוביים ושליליים, זוהי נקודת אוכף.
+ 
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Enumerate
+נשתמש בפונקציית ההפסד הבאה:
+\begin_inset Formula 
+\[
+\ell\left(y,y'\right)=\sin\left(\frac{1}{2}\left(y-y'\right)\right)^{2}
+\]
+
+\end_inset
+
+כאשר 
+\begin_inset Formula $y$
+\end_inset
+
+ מייצג את הלייבל האמיתי, ו-
+\begin_inset Formula $y'$
+\end_inset
+
+ הפרדיקציה של הרשת )זוויות(.
+ הטווח של 
+\begin_inset Formula $\ell\left(y,y'\right)$
+\end_inset
+
+ הוא 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+.
+ בחרנו בפונקצית ההפסד הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל מכיוון שפונקציית הסינוס היא פונקציה מונוטונית עולה בתחום 
+\begin_inset Formula $\left[-90^{\circ},90^{\circ}\right]$
+\end_inset
+
+, וזה תואם לכך שככל שההפרש 
+\begin_inset Formula $y-y'$
+\end_inset
+
+ קטן יותר, גם פונקציית ההפסד קטנה יותר, ולהפך.
+ למשל, במקרי הקצה, כאשר עבור ההפרש הכי גדול האפשרי בין 
+\begin_inset Formula $y$
+\end_inset
+
+ ו-
+\begin_inset Formula $y'$
+\end_inset
+
+ )בערך מוחלט, ועד כדי ציקליות( הוא 
+\begin_inset Formula $180^{\circ}$
+\end_inset
+
+, פונקציית ההפסד נותנת את הערך 
+\begin_inset Formula $1$
+\end_inset
+
+ )
+\begin_inset Formula $\sin\left(90^{\circ}\right)^{2}=1$
+\end_inset
+
+( ועבור ההפרש הכי קטן שהוא 
+\begin_inset Formula $0^{\circ}$
+\end_inset
+
+ נקבל ש-
+\begin_inset Formula $\ell\left(y,y'\right)=\sin\left(\frac{1}{2}\cdot0^{\circ}\right)^{2}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+קוד 
+\begin_inset Formula $\text{tensorflow}$
+\end_inset
+
+ שמממש את פונקציית ההפסד הנ
+\begin_inset Quotes erd
+\end_inset
+
+ל:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+inline false
+status open
+
+\begin_layout Plain Layout
+
+from tensorflow.keras.losses import Loss
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+class AnglesLoss(Loss):
+\end_layout
+
+\begin_layout Plain Layout
+
+	def call(self, y_true, y_pred):
+\end_layout
+
+\begin_layout Plain Layout
+
+		return tf.square(tf.sin(0.5 * (y_true- y_pred)))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+נזכור כי משפט 
+\begin_inset Formula $\text{Cybenko}$
+\end_inset
+
+ אומר כי אם 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ פונקציה מונוטנית ורציפה עם 
+\begin_inset Formula $\sigma\left(-\infty\right)=0$
+\end_inset
+
+ וכן 
+\begin_inset Formula $\sigma\left(\infty\right)=1$
+\end_inset
+
+, אז משפחת הפונקציות:
+\begin_inset Formula 
+\[
+f\left(x\right)=\sum_{i}\alpha_{i}\sigma\left(w_{i}x+b_{i}\right)
+\]
+
+\end_inset
+
+היא צפופה ב-
+\begin_inset Formula $C\left(\left[0,1\right]\right)$
+\end_inset
+
+ ביחס לנורמת הסופרימום: 
+\begin_inset Formula $d\left(f,g\right)=\sup\left|f\left(x\right)-g\left(x\right)\right|$
+\end_inset
+
+.
+ נזכור כי משפט 
+\begin_inset Formula $\text{Hornik}$
+\end_inset
+
+ מרחיב את משפט 
+\begin_inset Formula $\text{Cybenko}$
+\end_inset
+
+ לכל פונקציה 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ כזו שהיא חסומה.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+הפונקציה 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+ אמנם אינה חסומה, אך נוכל להגדיר פונקציה אחרת, שהיא כן חסומה, ומתלכדת עם
+ 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+ בקטע 
+\begin_inset Formula $\left[-\infty,1\right]$
+\end_inset
+
+:
+\begin_inset Formula 
+\[
+\sigma\left(x\right)=\begin{cases}
+0 & x\leq0\\
+x & 0\leq x\leq1\\
+1 & x\geq1
+\end{cases}
+\]
+
+\end_inset
+
+נשים לב כי למעשה מתקיים 
+\begin_inset Formula $\sigma\left(x\right)=\text{Relu}\left(x\right)-\text{Relu}\left(x-1\right)$
+\end_inset
+
+.
+ כמו כן הפונקציה 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ היא פונקציה מונוטונית ורציפה, וכן היא חסומה, ולכן ממשפט 
+\begin_inset Formula $\text{Hornik}$
+\end_inset
+
+, משפחת הפונקציות 
+\begin_inset Formula $f\left(x\right)=\sum_{i}\alpha_{i}\sigma\left(w_{i}x+b_{i}\right)$
+\end_inset
+
+ צפופה ב-
+\begin_inset Formula $C\left(\left[0,1\right]\right)$
+\end_inset
+
+.
+ ומכיוון שזה נכון עבור 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ שהגדרנו, זה נכון גם עבור 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+, שמתלכדת איתה בקטע 
+\begin_inset Formula $\left[0,1\right]$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+נכליל את הבניה של הרשת העמוקה שמביעה רשת רדודה ב-
+\begin_inset Formula $O\left(N\right)$
+\end_inset
+
+ נוירונים, שראינו בכיתה, גם מבלי להניח ש-
+\begin_inset Formula $\alpha_{i}>0$
+\end_inset
+
+ בפונקציה המתארת את הרשת הרדודה:
+\begin_inset Formula 
+\[
+f\left(x\right)=\sum_{i=1}^{N}\alpha_{i}\sigma\left(w_{i}x+b_{i}\right)
+\]
+
+\end_inset
+
+ברשת העמודה יהיו הפעם 
+\begin_inset Formula $6$
+\end_inset
+
+ נוירונים בכל שכבה )ולא 
+\begin_inset Formula $3$
+\end_inset
+
+ כמו ברשת שראינו בכיתה(, כך שבסהכ יהיו 
+\begin_inset Formula $6N=O\left(N\right)$
+\end_inset
+
+ נוירונים סה
+\begin_inset Quotes erd
+\end_inset
+
+כ.
+ בכל שכבה נוסיף נוירונים )שנסמנם 
+\begin_inset Formula $h_{4},h_{5}$
+\end_inset
+
+( ששווים בערכם ל-
+\begin_inset Formula $h_{4}=\sigma\left(h_{2}\right)$
+\end_inset
+
+ וכן 
+\begin_inset Formula $h_{5}=\sigma\left(-h_{2}\right)$
+\end_inset
+
+, כלומר הנוירון 
+\begin_inset Formula $h_{4}$
+\end_inset
+
+ יהיה בעל קשת מ-
+\begin_inset Formula $h_{2}$
+\end_inset
+
+ עם משקולת 
+\begin_inset Formula $1$
+\end_inset
+
+, והנוירון 
+\begin_inset Formula $h_{5}$
+\end_inset
+
+ יהיה בעל קשת מ-
+\begin_inset Formula $h_{2}$
+\end_inset
+
+ עם משקולת 
+\begin_inset Formula $-1$
+\end_inset
+
+.
+ נשנה את הרשת שהוצגה בכיתה כך שנחבר כעת את הנוירון 
+\begin_inset Formula $h_{4}$
+\end_inset
+
+ )ולא 
+\begin_inset Formula $h_{2}$
+\end_inset
+
+( לנוירון 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ )עם משקולת 
+\begin_inset Formula $1$
+\end_inset
+
+(.
+ מה שנקבל הוא שהנוירון 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ סוכם בצורה הדרגתית את כל הגורמים החיוביים בסכימה )אלו עבורם 
+\begin_inset Formula $\alpha_{i}\geq0$
+\end_inset
+
+(.
+ בנוסף נוסיף נוירון )שנסמנו 
+\begin_inset Formula $h_{6}$
+\end_inset
+
+( שתפקידו יהיה דומה לזה של 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ - לסכום את כל האיברים השליליים בסכום.
+ זאת נעשה על-ידי חיבור הנוירון 
+\begin_inset Formula $h_{5}$
+\end_inset
+
+ ו-
+\begin_inset Formula $h_{6}$
+\end_inset
+
+ מהשכבה הקודמת לנוירון 
+\begin_inset Formula $h_{6}$
+\end_inset
+
+ של השכבה הבאה, עם משקולות 
+\begin_inset Formula $1$
+\end_inset
+
+.
+ לבסוף, בשכבה האחרונה של הרשת, הפלט של הרשת יהיה נוירון בודד שערכו 
+\begin_inset Formula $h_{1}-h_{6}$
+\end_inset
+
+ )ללא אקטיבציית 
+\begin_inset Formula $\text{Relu}$
+\end_inset
+
+(.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+נשים לב שאם לדוגמה 
+\begin_inset Formula $\alpha_{i}\geq0$
+\end_inset
+
+, בשכבה ה-
+\begin_inset Formula $i$
+\end_inset
+
+ של הרשת נקבל ש-
+\begin_inset Formula $h_{2}=\alpha_{i}\sigma\left(w_{i}\left(h_{3}-L\right)+b_{i}\right)\geq0$
+\end_inset
+
+, ולכן יתקיים 
+\begin_inset Formula $h_{4}=\sigma\left(h_{2}\right)=h_{2}=\alpha_{i}\sigma\left(w_{i}\left(h_{3}-L\right)+b_{i}\right)$
+\end_inset
+
+ ובשכבה שלאחר מכן יתקיים 
+\begin_inset Formula $h_{1}=\sigma\left(h_{1}+h_{4}\right)=\sigma\left(h_{1}+\alpha_{i}\sigma\left(w_{i}\left(h_{3}-L\right)+b_{i}\right)\right)$
+\end_inset
+
+.
+ בנוסף, 
+\begin_inset Formula $h_{5}=\sigma\left(-h_{2}\right)=0$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $h_{6}=\sigma\left(h_{6}+h_{5}\right)=\sigma\left(h_{6}\right)=h_{6}$
+\end_inset
+
+ )כלומר במצב זה 
+\begin_inset Formula $h_{6}$
+\end_inset
+
+ לא ישתנה(.
+ באופן דומה, אם 
+\begin_inset Formula $\alpha_{i}\leq0$
+\end_inset
+
+, אז 
+\begin_inset Formula $h_{6}$
+\end_inset
+
+ יסכום לתוכו את האיבר החדש שב-
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ )לאחר שהפכנו אותו לחיובי דרך 
+\begin_inset Formula $h_{5}$
+\end_inset
+
+(, וערכו של 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ לא ישתנה.
+ בסופו של דבר 
+\begin_inset Formula $h_{1}$
+\end_inset
+
+ יכיל את סכום כל האיברים החיוביים בסכימה, ו-
+\begin_inset Formula $h_{6}$
+\end_inset
+
+ יכיל את סכום כל האיברים השליליים בסכימה )או יותר נכון הערך המוחלט של הסכום(,
+ ולכן נוירון הפלט שערכו 
+\begin_inset Formula $h_{1}-h_{6}$
+\end_inset
+
+ יכיל בדיוק את הסכום המלא שמתאר את הפונקציה 
+\begin_inset Formula $f\left(x\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+להלן ציור המתאר את הארכיטקטורה החדשה של הרשת בשכבה ה-
+\begin_inset Formula $i$
+\end_inset
+
+, כפי שתיארנו לעיל:
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename 75a9889b-4d04-4682-a01e-b78a3881f821.jfif
+	scale 40
+	rotateAngle 90
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
